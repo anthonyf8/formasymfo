@@ -16,6 +16,22 @@ class EventRepository extends ServiceEntityRepository
         parent::__construct($registry, Event::class);
     }
 
+    /*public function findBetweenDates(?\DateTimeImmutable $startAt, ?\DateTimeImmutable $endAt): ?iterable
+    {
+      $qb = $this->createQueryBuilder('e');
+      if (null !== $startAt) {
+        $qb->andWhere('e.startAt = :startAt');
+        $qb->setParameter('startAt', $startAt);
+      }
+      if (null !== $endAt) {
+        $qb->andWhere('e.endAt = :endAt')
+        $qb->setParameter('endAt', $endAt)
+      }
+
+      return $qb->getQuery()->getResult();
+
+    }*/
+
     //    /**
     //     * @return Event[] Returns an array of Event objects
     //     */

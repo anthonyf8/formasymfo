@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{event.name}}{% endblock %}
+
+{% block body %}
+  <h1>{{event.name}}</h1>
+
+  <p>{{event.startAt|date('Y-m-d')}}</p>
+
+
+
+{% endblock %}
