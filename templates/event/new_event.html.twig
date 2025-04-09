@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Form creation event{% endblock %}
+
+{% block body %}
+
+<section class="container row row-cols-1">
+    <div class="col-md-8 mx-auto">
+        <h1>New event</h1>
+    </div>
+
+    {# afficher label #}
+    {##{ form_label(form.name) }#}
+    {# afficher input #}
+    {#{ form_widget(form.name) }#}
+    {# afficher erreur #}
+    {#{ form_errors(form.name) }#}
+      {# Can also be used to render "global" errors
+       not associated to a field #}
+    {#{ form_errors(form) }#}
+    {#affiche toute la ligne dun coup#}
+    {#{ form_row(form.name) }#}
+
+    {#affiche tout#}
+    {{ form_start(form, { method: 'POST' }) }}
+
+      {{ form_widget(form) }}
+
+      <input type="submit">
+
+    {{ form_end(form, {render_rest: true}) }}
+
+</section>
+
+{% endblock %}
