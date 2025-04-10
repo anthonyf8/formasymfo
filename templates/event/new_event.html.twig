@@ -21,14 +21,9 @@
     {#affiche toute la ligne dun coup#}
     {#{ form_row(form.name) }#}
 
-    {#affiche tout#}
-    {{ form_start(form, { method: 'POST' }) }}
+    {% include 'partials/_form.html.twig' with {'form':form} %}
 
-      {{ form_widget(form) }}
 
-      <input type="submit">
-
-    {{ form_end(form, {render_rest: true}) }}
 
 </section>
 

@@ -1,0 +1,12 @@
+<div class="col-md-8 mx-auto">
+
+  {#affiche tout#}
+  {{ form_start(form, { method: 'POST' }) }}
+
+    {{ form_widget(form) }}
+
+    <input type="submit">
+
+  {{ form_end(form, {render_rest: true}) }}
+
+</div>
